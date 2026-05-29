@@ -50,9 +50,9 @@ RUBRIC_FIELDS = [
         "placeholder": "Contoh: Nama variabel masih terlalu singkat seperti a, b, dan c. Sebaiknya gunakan nama yang lebih jelas seperti nilaiTugas, nilaiUjian, atau rataRata."
     },
     {
-        "field_key": "expression",
+        "field_key": "expressions",
         "title": "Expressions",
-        "expected_label": "Expression",
+        "expected_label": "Expressions",
         "help": "Komentar sebaiknya membahas ekspresi, rumus, tipe data, operasi perhitungan, dan kesederhanaan formula.",
         "placeholder": "Contoh: Rumus perhitungan rata-rata sudah benar, tetapi akan lebih jelas jika operasi perhitungan dipisahkan ke variabel khusus."
     },
@@ -295,7 +295,7 @@ def demo_predict(text: str):
     lower_text = clean_text.lower()
     keyword_map = {
         "Variable": ["variabel", "variable", "nama", "penamaan", "singkat"],
-        "Expression": ["rumus", "formula", "perhitungan", "operasi", "tipe data", "ekspresi"],
+        "Expressions": ["rumus", "formula", "perhitungan", "operasi", "tipe data", "ekspresi"],
         "Control Flow": ["if", "else", "perulangan", "loop", "kondisi", "alur", "validasi"],
         "Comments": ["komentar", "comment", "penjelasan", "dokumentasi"],
         "Layout and Formatting": ["rapi", "indentasi", "spasi", "format", "layout", "baris"],
@@ -711,7 +711,7 @@ sidebar_card(
 )
 sidebar_card(
     "Label Model",
-    "Variable, Expression, Control Flow, Comments, Layout and Formatting, Decomposition, dan General.",
+    "Variable, Expressions, Control Flow, Comments, Layout and Formatting, Decomposition, dan General.",
 )
 sidebar_status_card(demo_mode)
 
